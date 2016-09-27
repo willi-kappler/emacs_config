@@ -46,6 +46,10 @@ C-x C-u		upcase region
 C-x TAB		indent text above cursor
 C-u n C-x TAB	indent by n
 C-u -n C-x TAB	indent by -n
+C-x rt 	   	replace text in rectangle (point, mark)
+C-ä 		mark next, new cursor
+C-ö		mark previous, new cursor
+C-ü		expand region
 
 
 M-; 		comment / uncomment
@@ -82,6 +86,8 @@ M-g g		goto line
 M-g e		avy goto word0
 C-c j		avy goto char1
 C-x C-x		swap point and mark
+C-c f		find next char
+C-c F		find previous char
 
 Search:
 
@@ -158,6 +164,7 @@ M-x hexl-mode
 M-x ediff
 M-x eval-buffer
 M-x dired
+M-x calculator, D decimal, H hex, B binary, O octal
 
 M-x compile
 Ctl-x `		go to next error

@@ -9,6 +9,7 @@
    ["black" "red3" "ForestGreen" "yellow3" "blue" "magenta3" "DeepSkyBlue" "gray50"])
  '(column-number-mode t)
  '(custom-enabled-themes (quote (manoj-dark)))
+ '(package-selected-packages (quote (expand-region iy-go-to-char multiple-cursors)))
  '(show-paren-mode t)
  '(size-indication-mode t))
 (custom-set-faces
@@ -39,6 +40,7 @@
 (desktop-save-mode 1)
 (setq bookmark-save-flag t)
 (global-linum-mode t)
+
 ;(load-theme 'manoj-dark)
 ;(set-background-color "black")
 ;(set-face-attribute 'default nil :height 180)
@@ -46,13 +48,35 @@
 
 
 ; For MacOS: define super for alt-gr on german PC keyboard
-(define-key global-map [?\s-7] (lambda () (interactive) (insert "{")))
-(define-key global-map [?\s-8] (lambda () (interactive) (insert "[")))
-(define-key global-map [?\s-9] (lambda () (interactive) (insert "]")))
-(define-key global-map [?\s-0] (lambda () (interactive) (insert "}")))
-(define-key global-map [?\s-ß] (lambda () (interactive) (insert "\\")))
-(define-key global-map [?\s-+] (lambda () (interactive) (insert "~")))
-(define-key global-map [?\s-^] (lambda () (interactive) (insert "|")))
-(define-key global-map [?\s-q] (lambda () (interactive) (insert "@")))
+(if (eq system-type 'darwin)
+  (define-key global-map [?\s-7] (lambda () (interactive) (insert "{")))
+  (define-key global-map [?\s-8] (lambda () (interactive) (insert "[")))
+  (define-key global-map [?\s-9] (lambda () (interactive) (insert "]")))
+  (define-key global-map [?\s-0] (lambda () (interactive) (insert "}")))
+  (define-key global-map [?\s-ß] (lambda () (interactive) (insert "\\")))
+  (define-key global-map [?\s-+] (lambda () (interactive) (insert "~")))
+  (define-key global-map [?\s-^] (lambda () (interactive) (insert "|")))
+  (define-key global-map [?\s-q] (lambda () (interactive) (insert "@")))
+)
 
+(require 'package) ;; You might already have this line
+(add-to-list 'package-archives
+             '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+(when (< emacs-major-version 24)
+  ;; For important compatibility libraries like cl-lib
+  (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
+(package-initialize) ;; You might already have this line
+
+(require 'multiple-cursors)
+
+(global-set-key (kbd "C-ä") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-ö") 'mc/mark-previous-like-this)
+
+(require 'iy-go-to-char)
+
+(global-set-key (kbd "C-c f") 'iy-go-to-char)
+(global-set-key (kbd "C-c F") 'iy-go-to-char-backward)
+
+(require 'expand-region)
+(global-set-key (kbd "C-ü") 'er/expand-region)
 
