@@ -1,0 +1,250 @@
+File:
+
+C-x C-f		open file
+C-x i		insert-file
+C-x C-s		save-buffer
+C-x C-w		save as
+C-x C-b		list-buffers
+C-x k		kill-buffer
+C-x 2		split-window-horizontally
+C-x 3		split-windws-vertically
+C-x n		other-window (when screen is split, switch to other window)
+C-x o		switch to other window
+C-x 0		delete-window
+C-x 1		delete-other-windows
+C-x C-c		save-buffers-kill-emacs (exit, quit)
+C-x b 		go to buffer with name or create a new empty buffer
+M-x shell	run shell in emacs
+M-x term	run full terminal in emacs
+
+
+Edit:
+
+C-k		kill-line
+C-w		cut (kill-region)
+M-w		copy (kill-ring-save)
+C-y		paste (yank)
+M-d		delete next word
+M-backspace	delete previous word
+C-k		delete to end of line
+C-x h		select all
+C-g 		command quit, abort command / keystroke
+M-/		completition
+C-_		undo (control-shift-underscore)
+C-z		undo
+C-x u		undo
+C-/		undo
+M-g g		goto line
+C-t 		transpose chars
+M-t		transpose words
+C-x C-t		transpose lines
+M-c 		capitalize word
+M-u		upcase word
+M-l		downcase word
+C-x C-l		downcase region
+C-x C-u		upcase region
+C-x TAB		indent text above cursor
+C-u n C-x TAB	indent by n
+C-u -n C-x TAB	indent by -n
+
+
+M-; 		comment / uncomment
+C-x (		start macro recording
+F3  		start macro recording
+C-x )		stop macro recording
+F4		stop macro recording
+C-g 		abort macro recording
+C-x e		redo last macro
+F4  		redo last macro
+to save macro:  name-last-kbd-macro, insert-kbd-macro, save to .emacs file, 
+M-x name        call named macro
+
+
+Move:
+
+C-home		begin of buffer
+C-end		end of buffer
+C-a, home	begin of line
+C-e, end	end of line
+M-left		previous word
+M-right		next word
+M-a		begin of paragraph
+M-e		end of paragraph
+C-M-f		next parent
+C-M-n		next parent
+C-M-right	next parent
+C-M-b		previous parent
+C-M-p		previous parent
+C-M-left	previous parent
+C-x left	next buffer
+C-x right	previous buffer
+M-g g		goto line
+M-g e		avy goto word0
+C-c j		avy goto char1
+C-x C-x		swap point and mark
+
+Search:
+
+C-s		isearch-forward	
+C-r		isearch-backward
+C-s C-w         search word
+C-M-s		isearch forward with rexexp
+C-M-r		isearch backward with rexexp
+M-s w		search for word
+M-s o		show regexp occurance
+M-% 		search and replace: y replace, n skip, q quit, ! replace all
+C-M-%		search and replace with regexp
+
+Bookmarks:
+
+C-x r m		save current buffer to bookmark
+C-x r l		open bookmark list
+C-x r b		jump to a bookmark item
+
+In bookmark mode:
+
+D		mark current item
+x		delete all marked items
+r		rename current item
+s		save current bookmark list
+q		quit bookmark mode
+return		open bookmarked file in new buffer
+
+
+Free keys to use in emacs:
+C-F1 to C-F12
+S-F1 to S-F12
+M-F1 to M-F12
+
+Examples:
+(global-set-key (kbd "M-<f2>") 'macro-name) ; Meta+F2
+(global-set-key (kbd "C-<f2>") 'macro-name)  ; Ctrl+F2
+(global-set-key (kbd "S-<f2>") 'marco-name)  ; Shift+F2
+
+
+Help:
+
+C-h k		find name of command by pressing key
+C-h f		find shortcut of command
+
+
+Useful commands:
+
+M-x cd (change working directory)
+M-x sort-lines
+M-x sort-fields
+M-x sort-numeric-fields
+M-x sort-columns
+M-x upcase-initials-region
+M-x upcase-region
+M-x downcase-region
+M-x list-matching-lines (acts on whole file)
+M-x delete-matching-lines (acts on region if exist, else work from cursor point to end of file.)
+M-x delete-non-matching-lines (acts on region if exist, else work from cursor point to end of file.)
+M-s h p      or    M-x highlight-phrase (color a word you want. Acts on the whole file)
+C-x w r      unhighlight
+M-x highlight-regexp
+M-x highlight-lines-matching-regexp
+M-x list-matching-lines
+M-x delete-matching-lines
+M-x delete-non-matching-lines
+M-x reverse-region
+M-x delete-trailing-whitespace
+M-x whitespace-mode
+M-x copy-to-register
+M-x insert-register
+M-x hexl-find-file
+M-x hexl-mode
+M-x ediff
+M-x eval-buffer
+M-x dired
+
+M-x compile
+Ctl-x `		go to next error
+
+
+Fortran mode:
+
+M-x fortran-mode
+C-c C-n		Move to the beginning of the next statement
+C-c C-p		Move to the beginning of the previous statement
+C-c C-e		Move point forward to the start of the next code block, or the end of the current one, whichever comes first
+C-c C-a		Move point backward to the previous block
+C-M-n		Move to the end of the current code block 
+C-M-p		Move to the start of the current code block
+C-M-j		Break the current line at point and set up a continuation line
+M-^		Join this line to the previous line
+C-M-q		Indent all the lines of the subprogram that point is in
+M-q		Fill a comment block or statement
+M-;		Align comment or insert new comment
+C-c ;		Turn all lines of the region into comments
+C-c C-r		Display a “column ruler” momentarily above the current line
+Type ‘;?’ or ‘;C-h’ to display a list of all the built-in Fortran abbrevs and what they stand for. 
+
+
+VC-SVN mode:
+
+C-x v v     vc-next-action -- perform the next logical control operation on file
+C-x v i     vc-register -- add a new file to version control
+
+C-x v +     vc-update -- Get latest changes from version control
+C-x v ~     vc-version-other-window -- look at other revisions
+C-x v =     vc-diff -- diff with other revisions
+C-x v u     vc-revert-buffer -- undo checkout
+C-x v c     vc-cancel-version -- delete the latest revision (often it makes more sense to look at an old revision and check that in again!)
+
+C-x v d     vc-directory -- show all files which are not up to date
+C-x v g     vc-annotate -- show when each line in a tracked file was added and by whom
+
+C-x v s     vc-create-snapshot -- tag all the files with a symbolic name
+C-x v r     vc-retrieve-snapshot -- undo checkouts and return to a snapshot with a symbolic name
+
+C-x v l     vc-print-log -- show log (not in ChangeLog format)
+C-x v a     vc-update-change-log -- update ChangeLog
+
+C-x v m     vc-merge
+C-x v h     vc-insert-headers
+
+M-x vc-resolve-conflicts -- pop up an ediff-merge session on a file with conflict markers
+
+Python mode:
+
+C-j:        Insert a new line with the same indentation level as the current line
+RET: 	    Insert a new line with the same indentation level as the current line
+C-M-a: 	    Go to the beginning of the current function or class
+C-M-e: 	    Go to the end of the current function or class
+C-M-h: 	    Mark the current function or class for copying, etc.
+C-M-x: 	    Execute the current function or class
+C-c C-b:    Submit a bug report
+C-c C-c:    Execute the buffer (i.e., the file being displayed)
+C-c C-d:    Trace the stack of the process being executed
+C-c C-h:    Get context-based help
+C-c TAB:    Indent a highlighted (or marked) region
+C-c C-k:    Mark a block of text. Using this at the head of a class or function definition will mark the entire block.
+C-c C-l:    Shift the region to the left. If the cursor is in the middle of a region, the lower half of the region will shift.
+C-c RET:    Execute the current file, opening a new window to show the output.
+C-c C-n:    Jump to the next statement.
+C-c C-p:    Jump to the previous statement.
+C-c C-r:    Shift the region to the right. If the cursor is in the middle of a region, the lower half of the region will shift.
+C-c C-s:    Execute a Python command.
+C-c C-t:    Toggle shells
+C-c C-u:    Go up one block
+C-c C-v:    List the version of the Python mode
+C-c C-w:    Run PyChecker
+C-c !: 	    Open the Python interactive shell
+C-c #: 	    Comment the highlighted (marked) region
+C-c :: 	    Check the indentation off-set
+C-c <: 	    Shift the region to the left
+C-c >: 	    Shift the region to the right
+C-c ?: 	    Show Python mode documentation
+C-c |: 	    Execute the highlighted (marked) part of the current program.
+
+Tags:
+
+create emacs tags with:
+
+ctags -e *
+
+M-.          search for tag (default: word under cursor)
+M-*	     jump back
+C-u M-.	     go to next match
