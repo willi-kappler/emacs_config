@@ -163,6 +163,7 @@ M-x hexl-find-file
 M-x hexl-mode
 M-x ediff
 M-x eval-buffer
+M-x eval-region
 M-x dired
 M-x calculator, D decimal, H hex, B binary, O octal
 

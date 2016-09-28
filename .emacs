@@ -68,12 +68,10 @@
 (package-initialize) ;; You might already have this line
 
 (require 'multiple-cursors)
-
 (global-set-key (kbd "C-ä") 'mc/mark-next-like-this)
 (global-set-key (kbd "C-ö") 'mc/mark-previous-like-this)
 
 (require 'iy-go-to-char)
-
 (global-set-key (kbd "C-c f") 'iy-go-to-char)
 (global-set-key (kbd "C-c F") 'iy-go-to-char-backward)
 
