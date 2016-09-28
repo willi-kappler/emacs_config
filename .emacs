@@ -78,3 +78,7 @@
 (require 'expand-region)
 (global-set-key (kbd "C-ü") 'er/expand-region)
 
+(require 'bm)
+(global-set-key (kbd "<C-f5>") 'bm-toggle)
+(global-set-key (kbd "<f5>")   'bm-next)
+(global-set-key (kbd "<S-f5>") 'bm-previous)

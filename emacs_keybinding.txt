@@ -88,6 +88,9 @@ C-c j		avy goto char1
 C-x C-x		swap point and mark
 C-c f		find next char
 C-c F		find previous char
+C-f5		toggle visible bookmark
+f5		jump to next bookmark
+S-f5		jump to previous bookmark
 
 Search:
 
