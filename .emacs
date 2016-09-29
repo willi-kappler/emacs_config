@@ -106,3 +106,6 @@
    (perform-replace "ß" "&szlig;" nil nil nil)))
 
 (global-set-key (kbd "<f6>") 'german-to-html)
+
+(require 'comint)
+(global-set-key (kbd "C-c p") 'comint-dynamic-complete-filename)
