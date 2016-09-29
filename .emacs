@@ -82,3 +82,24 @@
 (global-set-key (kbd "<C-f5>") 'bm-toggle)
 (global-set-key (kbd "<f5>")   'bm-next)
 (global-set-key (kbd "<S-f5>") 'bm-previous)
+
+(defun german-to-html ()
+   "Replace german umlauts with HTML token in current buffer"
+   (interactive)
+   (save-excursion
+   (goto-char (point-min))
+   (perform-replace "Ä" "&Auml;" nil nil nil)
+   (goto-char (point-min))
+   (perform-replace "ä" "&auml;" nil nil nil)
+   (goto-char (point-min))
+   (perform-replace "Ö" "&Ouml;" nil nil nil)
+   (goto-char (point-min))
+   (perform-replace "ö" "&ouml;" nil nil nil)
+   (goto-char (point-min))
+   (perform-replace "Ü" "&Uuml;" nil nil nil)
+   (goto-char (point-min))
+   (perform-replace "ü" "&uuml;" nil nil nil)
+   (goto-char (point-min))
+   (perform-replace "ß" "&szlig;" nil nil nil)))
+
+(global-set-key (kbd "<f6>") 'german-to-html)
