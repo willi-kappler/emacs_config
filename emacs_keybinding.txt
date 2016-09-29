@@ -50,6 +50,8 @@ C-x rt 	   	replace text in rectangle (point, mark)
 C-ä 		mark next, new cursor
 C-ö		mark previous, new cursor
 C-ü		expand region
+C-c p		auto-complete path name in buffer
+F6  		german umlauts to html
 
 
 M-; 		comment / uncomment
