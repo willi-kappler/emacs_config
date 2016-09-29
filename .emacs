@@ -57,6 +57,9 @@
   (define-key global-map [?\s-+] (lambda () (interactive) (insert "~")))
   (define-key global-map [?\s-^] (lambda () (interactive) (insert "|")))
   (define-key global-map [?\s-q] (lambda () (interactive) (insert "@")))
+
+  (global-set-key (kbd "<home>") 'move-beginning-of-line)
+  (global-set-key (kbd "<end>") 'move-end-of-line)
 )
 
 (require 'package) ;; You might already have this line

@@ -250,6 +250,18 @@ C-c >: 	    Shift the region to the right
 C-c ?: 	    Show Python mode documentation
 C-c |: 	    Execute the highlighted (marked) part of the current program.
 
+HTML mode:
+
+C-M-n	    jump to next tag
+C-M-p	    jump to previous tag
+C-c C-f	    skip next balanced tag
+C-c C-b	    skip previous balanced tag
+C-c C-d	    delete tag
+C-c /	    insert closing tag
+C-c TAB	    toggle tag visibility
+C-c C-t	    insert tag
+C-c C-a	    insert attribute
+
 Tags:
 
 create emacs tags with:
