@@ -11,7 +11,7 @@
  '(custom-enabled-themes (quote (manoj-dark)))
  '(package-selected-packages
    (quote
-    (powerline magit expand-region iy-go-to-char multiple-cursors)))
+    (helm powerline magit expand-region iy-go-to-char multiple-cursors)))
  '(show-paren-mode t)
  '(size-indication-mode t))
 (custom-set-faces
@@ -19,7 +19,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(mode-line ((t (:background "grey75" :foreground "Blue" :box 1 :height 1.0))))
+ '(mode-line-buffer-id ((t (:background "grey65" :foreground "red" :weight bold :height 1.0))))
+ '(mode-line-inactive ((t (:background "grey30" :foreground "grey80" :box 1 :weight light :height 1.0)))))
 
 (add-to-list 'load-path "~/.emacs.d/lisp/")
 
@@ -117,3 +119,5 @@
 
 (require 'powerline)
 (powerline-default-theme)
+
+(require 'helm-config)
