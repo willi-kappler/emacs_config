@@ -224,6 +224,28 @@ VC-GIT mode:
 
 C-x g	    magit-status
 
+In magit status buffer:
+s  	    Stage files or stage hunks
+i	    Add file to gitignore
+k	    Discard uncommited changes
+c	    Prepare for commit
+C-c C-c	    Execute commit
+l   	    Show history
+L 	    Show verbose history
+Return	    Inspect commit
+a	    Add current commit on current branch
+A	    Commit current commit on current branch
+=	    Show difference between current and marked commit
+d	    Show changes between working tree and HEAD
+D	    Show changes between two arbitrary revisions
+b	    Switch to a different branch
+B	    Create and switch to new branch
+m	    Initiate manual merge
+M	    Initiate automatic merge
+P	    Push
+F	    Pull / Fetch
+
+
 
 Python mode:
 
