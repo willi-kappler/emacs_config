@@ -96,7 +96,7 @@ S-f5		jump to previous bookmark
 
 Search:
 
-C-s		isearch-forward	
+
 C-r		isearch-backward
 C-s C-w         search word
 C-M-s		isearch forward with rexexp
@@ -219,6 +219,11 @@ C-x v m     vc-merge
 C-x v h     vc-insert-headers
 
 M-x vc-resolve-conflicts -- pop up an ediff-merge session on a file with conflict markers
+
+VC-GIT mode:
+
+C-x g	    magit-status
+
 
 Python mode:
 

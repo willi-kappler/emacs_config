@@ -9,7 +9,9 @@
    ["black" "red3" "ForestGreen" "yellow3" "blue" "magenta3" "DeepSkyBlue" "gray50"])
  '(column-number-mode t)
  '(custom-enabled-themes (quote (manoj-dark)))
- '(package-selected-packages (quote (expand-region iy-go-to-char multiple-cursors)))
+ '(package-selected-packages
+   (quote
+    (powerline magit expand-region iy-go-to-char multiple-cursors)))
  '(show-paren-mode t)
  '(size-indication-mode t))
 (custom-set-faces
@@ -109,3 +111,9 @@
 
 (require 'comint)
 (global-set-key (kbd "C-c p") 'comint-dynamic-complete-filename)
+
+(require 'magit)
+(global-set-key (kbd "C-x g") 'magit-status)
+
+(require 'powerline)
+(powerline-default-theme)
