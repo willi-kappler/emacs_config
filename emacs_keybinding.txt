@@ -169,11 +169,28 @@ M-x hexl-mode
 M-x ediff
 M-x eval-buffer
 M-x eval-region
-M-x dired
 M-x calculator, D decimal, H hex, B binary, O octal
 
 M-x compile
 Ctl-x `		go to next error
+
+
+Dired mode:
+
+M-x dired
+
+d		Mark file to delete
+u		Unmark file
+x		Delete marked files
+C		Copy file
+D		Delete file
+R		Rename file
+S		Make symbolic link
+M		Change mode
+G		Change group
+O		Change owner
+T		Touch time stamp
+Z		Compress / Decompress file
 
 
 Fortran mode:
