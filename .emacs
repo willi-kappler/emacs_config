@@ -11,7 +11,7 @@
  '(custom-enabled-themes (quote (manoj-dark)))
  '(package-selected-packages
    (quote
-    (helm powerline magit expand-region iy-go-to-char multiple-cursors)))
+    (switch-window helm powerline magit expand-region iy-go-to-char multiple-cursors)))
  '(show-paren-mode t)
  '(size-indication-mode t))
 (custom-set-faces
@@ -121,3 +121,6 @@
 (powerline-default-theme)
 
 (require 'helm-config)
+
+(require 'switch-window)
+(global-set-key (kbd "C-x o") 'switch-window)
