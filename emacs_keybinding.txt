@@ -8,7 +8,6 @@ C-x C-b		list-buffers
 C-x k		kill-buffer
 C-x 2		split-window-horizontally
 C-x 3		split-windws-vertically
-C-x n		other-window (when screen is split, switch to other window)
 C-x o		switch to other window
 C-x 0		delete-window
 C-x 1		delete-other-windows
