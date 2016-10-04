@@ -52,7 +52,7 @@
 
 
 ; For MacOS: define super for alt-gr on german PC keyboard
-(if (eq system-type 'darwin)
+(when (eq system-type 'darwin)
   (define-key global-map [?\s-7] (lambda () (interactive) (insert "{")))
   (define-key global-map [?\s-8] (lambda () (interactive) (insert "[")))
   (define-key global-map [?\s-9] (lambda () (interactive) (insert "]")))
