@@ -39,7 +39,7 @@
 
 (global-set-key (kbd "C-c j") 'avy-goto-char)
 (global-set-key (kbd "C-'") 'avy-goto-char-2)
-(global-set-key (kbd "M-g e") 'avy-goto-word-0)
+(global-set-key (kbd "M-g e") 'avy-goto-word-1)
 
 (desktop-save-mode 1)
 (setq bookmark-save-flag t)
@@ -59,7 +59,7 @@
   (define-key global-map [?\s-0] (lambda () (interactive) (insert "}")))
   (define-key global-map [?\s-ß] (lambda () (interactive) (insert "\\")))
   (define-key global-map [?\s-+] (lambda () (interactive) (insert "~")))
-  (define-key global-map [?\s-^] (lambda () (interactive) (insert "|")))
+  (define-key global-map [?\s-<] (lambda () (interactive) (insert "|")))
   (define-key global-map [?\s-q] (lambda () (interactive) (insert "@")))
 
   (global-set-key (kbd "<home>") 'move-beginning-of-line)
@@ -130,5 +130,7 @@
 (setq helm-buffers-fuzzy-matching t
       helm-recentf-fuzzy-match    t)
 
-(require 'switch-window)
-(global-set-key (kbd "C-x o") 'switch-window)
+(require 'ace-window)
+(global-set-key (kbd "C-x o") 'ace-window)
+
+(global-set-key (kbd "<C-tab>") 'indent-relative)
