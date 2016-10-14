@@ -11,7 +11,7 @@
  '(custom-enabled-themes (quote (manoj-dark)))
  '(package-selected-packages
    (quote
-    (switch-window helm powerline magit expand-region iy-go-to-char multiple-cursors)))
+    (ace-window helm powerline magit expand-region iy-go-to-char multiple-cursors)))
  '(show-paren-mode t)
  '(size-indication-mode t))
 (custom-set-faces
@@ -130,5 +130,5 @@
 (setq helm-buffers-fuzzy-matching t
       helm-recentf-fuzzy-match    t)
 
-(require 'switch-window)
-(global-set-key (kbd "C-x o") 'switch-window)
+(require 'ace-window)
+(global-set-key (kbd "C-x o") 'ace-window)
